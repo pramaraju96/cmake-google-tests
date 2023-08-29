@@ -25,6 +25,6 @@ cp -p "${BUILD_DIR}/compile_commands.json" "${PROJECT_DIR}"
 
 # Run the tests
 cd build
-GTEST_COLOR=1 ctest --verbose
+GTEST_COLOR=1 ctest --output-junit build/ctest-results.xml --test-dir build
 
 echo "Build Finished"
