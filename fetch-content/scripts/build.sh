@@ -20,7 +20,7 @@ cp -p "${BUILD_DIR}/compile_commands.json" "${PROJECT_DIR}"
 
 # Run tests
 cd "${BUILD_DIR}"
-GTEST_COLOR=1 ctest --verbose
+GTEST_COLOR=1 ctest --verbose --output-junit fetch-content.xml
 
 echo "Build Finished"
 
