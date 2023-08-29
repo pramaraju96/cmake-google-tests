@@ -29,6 +29,6 @@ jobs:
       - bash: |
           set -euo pipefail
           cd "build/${{ parameters.cmakePreset }}" || exit
-          ctest --verbose --test-dir="${{ parameters.sourceDir }}/build/${{ parameters.cmakePreset }}"
+          ctest --verbose --test-dir="${{ parameters.sourceDir }}/build/${{ parameters.cmakePreset }} --output-junit ctest-output.xml"
         displayName: Running All Tests
         workingDirectory: ${{ parameters.sourceDir }}
